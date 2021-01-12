@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { store, add } from "../Store/index";
-import { ProductItem } from "../global";
+import { store, add } from "../../Store/index";
+import { ProductItem } from "../../global";
 import "./Product.css";
 
 const Product = () => {

@@ -2,9 +2,10 @@ import React from "react";
 import { Container, Box } from "@material-ui/core";
 import { Provider } from "react-redux";
 import { store } from "./Store/index";
-import { Basket } from "./components/Basket";
-import { Product } from "./components/Product";
+import { Basket } from "./components/Basket/Basket";
+import { Product } from "./components/Product/Product";
 import Navbar from "./components/Navbar/navbar";
+import Home from "./components/Home/Home"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
@@ -17,7 +18,7 @@ function App() {
             <Routes>
               <Route path="/">
                 <Box mt={5} >
-                  <Product />
+                  <Home />
                 </Box>
               </Route>
               <Route path="/basket">

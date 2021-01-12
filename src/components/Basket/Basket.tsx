@@ -13,9 +13,9 @@ import {
 } from "@material-ui/core"
 import DeleteIcon from "@material-ui/icons/Delete"
 
-import { ProductItem } from "../global"
+import { ProductItem } from "../../global"
 import { useSelector } from "react-redux"
-import { store, remove } from "../Store/index"
+import { store, remove } from "../../Store/index"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: theme.palette.background.paper
     },
     inline: {
-      display: "inline"
+      display: "inline",
     },
     listItem: {
       padding: theme.spacing(1, 0),
@@ -32,7 +32,17 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     total: {
       fontWeight: theme.typography.fontWeightBold,
-      fontSize: theme.typography.fontSize * 2
+      fontSize: theme.typography.fontSize * 2,
+      marginRight: '10px'
+    },
+    div: {
+      marginLeft: "10px",
+      marginRight: "10px",
+    },
+    tagline: {
+      marginTop: "10px",
+      marginBottom: "10px",
+
     }
   })
 )
@@ -42,11 +52,11 @@ const Basket = () => {
   const products = useSelector((state: ProductItem[]) => state)
 
   return (
-    <>
+    <div className={classes.div}>
       <Typography component="h2" variant="h6" color="primary" gutterBottom>
         Shopping Basket
       </Typography>
-      <Typography component="p" variant="body1">
+      <Typography className={classes.tagline} component="p" variant="body1">
         You have {products.filter(product => product.added).length} items in your basket
       </Typography>
       <List className={classes.root}>
@@ -98,7 +108,7 @@ const Basket = () => {
           </Typography>
         </ListItem>
       </List>
-    </>
+    </div>
   )
 }
 
