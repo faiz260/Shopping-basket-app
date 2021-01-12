@@ -1,9 +1,8 @@
 import React from "react";
-import { Container, Box } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import { Provider } from "react-redux";
 import { store } from "./Store/index";
 import { Basket } from "./components/Basket/Basket";
-import { Product } from "./components/Product/Product";
 import Navbar from "./components/Navbar/navbar";
 import Home from "./components/Home/Home"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
