@@ -25,7 +25,7 @@ function Navbar() {
       </div>
 
       <div className="header_nav">
-        <Link to="/orders" className="header_link">
+        <Link to="/" className="header_link">
           <div className="header_options">
             <span className="header_optionLineOne">Returns</span>
             <span className="header_optionLineTwo">& Orders</span>
